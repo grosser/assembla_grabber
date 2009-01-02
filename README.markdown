@@ -23,11 +23,11 @@ Usage
 
 WARNING
 =======
-Grabbing is illegal, so your account may get closed or something else...
+Grabbing is illegal, so your account may get closed or something else...  
 Therefore this libary is of course only for 'educational' purpose.
 
 AUTHOR
 ======
-Michael Grosser
-grosser.michael@gmail.com
-Hereby placed under public domain, do what you want, just do not hold me accountable...
+Michael Grosser  
+grosser.michael@gmail.com  
+Hereby placed under public domain, do what you want, just do not hold me accountable...  
