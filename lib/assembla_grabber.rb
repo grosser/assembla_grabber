@@ -1,7 +1,6 @@
 class AssemblaGrabber
   ASSEMBLA = "http://www.assembla.com"
   LOGIN_URL = 'https://www.assembla.com/user/do_login'
-  EDIT_LINK = 'Edit this page'
 
   def initialize(config_path)
     @config = YAML.load(IO.read(config_path))
