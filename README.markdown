@@ -7,6 +7,8 @@ Solution
 Grab all the wiki contents so that i can enter them somewhere else.
 Store name, human_name (how it was linked), text in markup form.
 
+Afterwards data can be posted to a TRAC (see post_to_trac.rb)
+
 Usage
 =====
 
