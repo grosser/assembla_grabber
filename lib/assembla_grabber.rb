@@ -8,16 +8,22 @@ class AssemblaGrabber
   end
 
   def grab_all
-    wiki_links = agent.get(to_url(root)).links.select {|link| link.uri.to_s.include?(root)}
+    grab_recursive(root)
+  end
+
+  def grab_recursive(page_path)
+    wiki_links = agent.get(to_url(page_path)).links.select {|link| link.uri.to_s.include?(root)}
     wiki_links.each do |link|
       begin
-        page = find_or_build_by_name(link.uri.to_s.sub(root+'/',''))
+        page_name = link.uri.to_s.sub(root+'/','')
+        page = find_or_build_by_name(page_name)
         next unless page.new_record?
         page.attributes = {
           :human_name=>link.text,
           :text=>grab_page(link.uri.to_s)
         }
         page.save!
+        grab_recursive(root+'/'+page_name)
       rescue
         puts link.uri.to_s
         puts $!
